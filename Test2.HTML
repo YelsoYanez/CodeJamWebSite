@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Read File (via AJAX)</title>
+<script type="text/javascript">
+var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+
+function loadFile() {
+    reader.open('get', 'Links.txt', true); 
+    reader.onreadystatechange = displayContents;
+    reader.send(null);
+}
+
+function displayContents() {
+    if(reader.readyState==4) {
+        var el = document.getElementById('main');
+        el.innerHTML = reader.responseText;
+    }
+}
+
+function Trial() {
+reader.open('get', 'Links1.txt', true); 
+    reader.onreadystatechange = displayContents2;
+    reader.send(null);
+}
+
+function displayContents2() {
+    if(reader.readyState==4) {
+        var el = document.getElementById('main');
+        el.innerHTML = reader.responseText;
+    }
+}
+
+document.write(result);
+</script>
+</head>
+<body>
+<div id="container">
+    <input type="button" value="All_Information"  onclick="loadFile()" />
+    <div id="main">
+    </div>
+
+<div id="container2">
+   <blink> <input type="button" value="Partial_Information"  onclick="Trial()" /> </blink>
+    <div id="main">
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+@-webkit-keyframes blink {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+blink {
+    -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: 5;
+    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+    -webkit-animation-duration: 1s;
+}
+
+</style>

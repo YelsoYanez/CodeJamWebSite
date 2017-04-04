@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+
+<blink> <a href="https://ssologin.cuny.edu/cuny.html?resource_url=https%3A%2F%2Fhome.cunyfirst.cuny.edu%252Fpsp%252Fcnyepprd%252FEMPLOYEE%252FEMPL%252Fh%252F%3Ftab%253DDEFAULT"> CUNYFirst </a></blink>
+<a href="https://cunyportal.cuny.edu/cpr/authenticate/portal_login.jsp?oberror=ErrSessionTimedOut"> CUNYPortal </a>
+<a href="https://play.spotify.com/browse"> Spotify </a>
+
+</head>
+<body>
+</body>
+
+<style>
+@-webkit-keyframes blink {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+blink {
+    -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+    -webkit-animation-duration: 1s;
+}
+</style>
